@@ -1,0 +1,131 @@
+    <div class="productsContainer">
+ <!-- starting of right menu with product contents -->
+ <div class="d-flex flex-row-reverse">
+ <app-menu></app-menu>
+
+  <!-- <div class="d-flex flex-column"> -->
+    <div class="row">
+
+    <div class="fixed-top searchbar col-md-6">
+
+      <div class="col-sm-12 col-md-12 searchIconContainer">
+        <div class="container-fluid d-flex align-items-center">
+          <form class="card card-sm inputContainer col-md-10 ">
+            <div class="card-body row no-gutters d-flex align-items-center">
+              <div id="container">
+                <div class="image-container">
+                  <img src="assets/imgs/scannerIcon.svg" alt="A image" />
+                </div>
+              </div>
+              <div id="iconSearch">
+                <div class="search-image-container">
+                  <img src="assets/imgs/searchIcon.svg" />
+                </div>
+              </div>
+              <div class="inputSearcontainer">
+                <input class="form-control form-control-lg form-control-borderless" type="search"
+                  placeholder="ابحث عن منتج او باركود" />
+              </div>
+            </div>
+          </form>
+          <div class="image-container d-flex col-lg-1 col-md-1 col-sm-12">
+            <div id="iconcontainer2">
+              <div class="image-container">
+                <img src="assets/imgs/Group 4885.svg" alt="A image" />
+              </div>
+            </div>
+            <div id="iconcontainer2">
+              <div class="image-container">
+                <img src="assets/imgs/heart.svg" onclick="swap();" id="favauriteIcon1" alt="A image" />
+                <img src="assets/imgs/blueFavourite.svg" onclick="Toggleswap();" style="display: none;"
+                  id="favauriteIcon2" alt="A image" />
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of search container -->
+    <!-- end of fixed header -->
+    <!-- start show products -->
+    <div class="salesContainer col-md-12 d-flex justify-content-start">
+
+      <div  [ngClass]="product.selected ? 'selected product_container' : 'product_container'"  *ngFor="let product of products" type="button" (click)="increaseCounter(product)">
+<div class="card" style="height: 100%;">
+  <div *ngIf="product.selected" class="addingProductCount">
+    <span> {{product.count}} </span>
+  </div>
+  <img class="card-img-top" [src]="product.productImage" alt="Card image"
+  style="width: 100%" />
+
+<div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+  aria-haspopup="true" aria-expanded="false">
+  <img src="assets/imgs/points.svg" />
+</div>
+<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <a class="dropdown-item" href="#"><img src="assets/imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+  <div class="divider"></div>
+  <a class="dropdown-item" href="#"><img src="assets/imgs/emptyHeart.svg" /><span data-toggle="modal" data-target="#ModalDetails">المخزون</span></a>
+</div>
+<div class="card-body">
+  <div class="describer_container">
+    <p class="card-text">{{product.productName}}</p>
+  </div>
+  <p class="price">{{product.productPrice}}</p>
+</div>
+</div>
+
+      </div>
+        <!-- start modal details of product -->
+  <!-- The Modal -->
+  <div class="modal modal_details fade" id="ModalDetails">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header d-flex justify-content-start align-items-center">
+          <button type="button" class="close" data-dismiss="modal">
+            &times;
+          </button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body"></div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <div class="d-flex justify-content-between">
+            <div class="title">
+              <p>المنتج</p>
+              <p class="subTitle">
+                جونسون، صابون للاستحمام<br />
+                15ملم
+              </p>
+            </div>
+            <div class="title">
+              <p>سعر البيع</p>
+              <p class="subTitle price">4.00</p>
+            </div>
+            <div class="title">
+              <p class="avaliable">الكمية المتاحة</p>
+              <div class="quantaty">
+                <span class="quantatyNum"> 12 </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end Modal of product details -->
+
+
+    </div>
+    <!-- end show products -->
+  </div>
+
+</div>
+<!-- end of right menu with product contents -->
+
+    </div>

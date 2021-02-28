@@ -1,0 +1,240 @@
+
+<div class="bg-bills">
+
+  <div class="first-top d-block" id="basicbill">
+    <div class="divider" style="border:none"></div>
+    <!-- bill with hover action -->
+    <div class="billDetails">
+      <div class="col-md-12 d-flex justify-content-between details">
+        <div class="col-md-4">
+
+          <div class="product_description long-and-truncated">
+            <p>جونسون، صابون للاستحمام</p>
+            <span><input type="number" placeholder="29.00"> </span>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+          <div class="d-flex justify-content-center">
+            <img class="img-1" src="assets/imgs/plus.svg" />
+            <div class="product_count">
+              <p>12</p>
+            </div>
+            <img class="img-2" src="assets/imgs/minus.svg" />
+          </div>
+        </div>
+        <div type="button" class="col-md-1 discountIcon d-flex justify-content-end" data-toggle="modal"
+          data-target="#order_discount" style="padding-right: 10px">
+          <img class="img-3" src="assets/imgs/discount.svg" />
+        </div>
+
+        <div class="col-md-2 cash d-flex justify-content-end">348.00</div>
+        <div class="col-md-1 d-flex justify-content-end">
+          <img class="img-4" src="assets/imgs/multiple.svg" />
+        </div>
+      </div>
+    </div>
+    <!-- end bill with hover action -->
+
+    <div class="billdivider"></div>
+
+    <!-- start bill with active discount icon  -->
+    <div class="billDetails">
+      <div class="col-md-12 d-flex justify-content-between details">
+
+        <div class="col-md-4">
+          <div class="product_description long-and-truncated">
+            <p>جونسون، صابون للاستحمام</p> <span><input type="number" placeholder="29.00"> </span>
+            &nbsp;
+            <span class="oldPrice">29.00</span>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+          <div class="d-flex justify-content-center">
+            <img class="img-1" src="assets/imgs/plus.svg" />
+            <div class="product_count">
+              <p>12</p>
+            </div>
+            <img class="img-2" src="assets/imgs/minus.svg" />
+          </div>
+        </div>
+        <div type="button" class="col-md-1 discountIcon d-flex justify-content-end" style="padding-right: 10px"
+         data-toggle="modal"
+          data-target="#delete_order">
+          <img class="img-6" src="assets/imgs/discount_active.svg" />
+        </div>
+
+        <div class="col-md-2 cash d-flex justify-content-end flex-column">
+          <p>
+            348.00
+          </p>
+          <p class="oldPrice"> 348.00</p>
+        </div>
+        <div class="col-md-1 d-flex justify-content-end">
+          <img class="img-4" src="assets/imgs/multiple.svg" />
+        </div>
+      </div>
+    </div>
+    <!-- end bill with active discount icon -->
+    <div class="billdivider"></div>
+    <!-- start bill with precentage discount -->
+    <div class="billDetails">
+
+      <div class="col-md-12 d-flex justify-content-between details">
+
+        <div class="col-md-4">
+
+          <div class="product_description long-and-truncated">
+            <p>جونسون، صابون للاستحمام</p><span><input type="number" placeholder="29.00"> </span>
+            &nbsp;
+            <span class="oldPrice">29.00</span>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+          <div class="d-flex justify-content-center">
+            <img class="img-1" src="assets/imgs/plus.svg" />
+            <div class="product_count">
+              <p>12</p>
+            </div>
+            <img class="img-2" src="assets/imgs/minus.svg" />
+          </div>
+        </div>
+        <div class="col-md-1 discountIcon d-flex justify-content-end" style="padding-right: 10px">
+          <div class="discountPrecentage">
+            <span>
+              10%
+            </span>
+          </div>
+        </div>
+
+        <div class="col-md-2 cash d-flex justify-content-end flex-column">
+          <p>
+            348.00
+          </p>
+          <p class="oldPrice"> 348.00</p>
+        </div>
+        <div class="col-md-1 d-flex justify-content-end">
+          <img class="img-4" src="assets/imgs/multiple.svg" />
+        </div>
+      </div>
+    </div>
+    <!-- end bill with precentage discount -->
+  </div>
+
+</div>
+
+
+
+  <!--start Modal of modal for order discount  -->
+  <div class="modal fade order_discount" id="order_discount" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="modal-title" id="myModalLabel">جونسون، صابون للاستحمام</p>
+        </div>
+        <div class="modal-body discountTabsContainer">
+          <div class="tab-regular">
+            <div class="d-flex justify-content-center align-items-center">
+              <!-- <li class="nav-item">
+                  <a class="nav-link d-flex justify-content-center align-items-center nav-left" id="nav-price-tab"
+                    data-toggle="tab" href="#chang-price" role="tab" aria-controls="profile" aria-selected="false">تغيير
+                    سعر الوحدة</a>
+                </li> -->
+              <div class="nav-item text-center">
+                <p class=" d-flex justify-content-center align-items-center nav-rigth"
+                  id="nav-discount-tab" data-toggle="tab" href="#discount" role="tab" aria-controls="home"
+                  aria-selected="true">الخصم<img src="assets/imgs/discountWithoutBg.svg"></p>
+              </div>
+
+
+            </div>
+            <!-- Tab panes -->
+            <div class="tab-pane fade show" id="discount" role="tabpanel" aria-labelledby="nav-discount-tab">
+              <div class="inputs-container d-flex justify-content-center align-items-center">
+                <input type="number" class="form-control" placeholder="0.00 ">
+
+                <img src="assets/imgs/convert.svg">
+                <input type="number" class="form-control" placeholder="00   %">
+
+
+              </div>
+              <div class="comment">
+                <p>
+                  تعليق
+                </p>
+                <input type="text" class="form-control" placeholder="اكتب تعليق">
+
+              </div>
+              <div class="btns-container">
+                <button type="button" class="btn-cancel" data-dismiss="modal">الغاء</button>
+
+                <button type="button" class="btn-apply" data-dismiss="modal">تطبيق</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--end Modal of modal for order discount  -->
+
+  <!--start Modal of modal for delete order discount  -->
+  <div class="modal fade order_discount" id="delete_order" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="modal-title" id="myModalLabel">جونسون، صابون للاستحمام</p>
+        </div>
+        <div class="modal-body discountTabsContainer">
+          <div class="tab-regular">
+            <div class="d-flex justify-content-center align-items-center">
+              <!-- <li class="nav-item">
+                  <a class="nav-link d-flex justify-content-center align-items-center nav-left" id="nav-price-tab"
+                    data-toggle="tab" href="#chang-price" role="tab" aria-controls="profile" aria-selected="false">تغيير
+                    سعر الوحدة</a>
+                </li> -->
+              <div class="nav-item text-center">
+                <p class=" d-flex justify-content-center align-items-center nav-rigth"
+                  id="nav-discount-tab" data-toggle="tab" href="#discount" role="tab" aria-controls="home"
+                  aria-selected="true">الخصم<img src="assets/imgs/discountWithoutBg.svg"></p>
+              </div>
+
+
+            </div>
+            <!-- Tab panes -->
+            <div class="tab-pane fade show" id="discount" role="tabpanel" aria-labelledby="nav-discount-tab">
+              <div class="inputs-container d-flex justify-content-center align-items-center">
+                <input type="number" class="form-control" placeholder="0.00 ">
+
+                <img src="assets/imgs/convert.svg">
+                <input type="number" class="form-control" placeholder="00   %">
+
+
+              </div>
+              <div class="delete-discount">
+                <p>
+                  الغاء الخصم
+                </p>
+              </div>
+
+              <div class="comment">
+                <p>
+                  تعليق
+                </p>
+                <input type="text" class="form-control" placeholder="اكتب تعليق">
+
+              </div>
+              <div class="btns-container">
+                <button type="button" class="btn-cancel" data-dismiss="modal">الغاء</button>
+
+                <button type="button" class="btn-apply" data-dismiss="modal">تطبيق</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--end Modal of modal for delete order discount  -->
+

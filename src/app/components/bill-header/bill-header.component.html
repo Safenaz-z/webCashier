@@ -1,0 +1,210 @@
+<div class="col-md-5">
+  <div class="billsHeaderContainer">
+    <div class="right col-md-4">
+      <div class="title">
+        <span> الفاتورة </span>
+      </div>
+      <div class="title2">
+        <span> #1005 </span>
+      </div>
+    </div>
+    <div class="text-center col-md-4 d-flex justify-content-center">
+      <div class="count">
+        <span> 6 </span>
+      </div>
+      <div class="billTitle">
+        <span> 44 </span>
+      </div>
+    </div>
+
+    <div class="left col-md-4 " type="button" id="dropdownMenuBill" data-toggle="dropdown">
+      <img id="menuIcon" src="assets/imgs/coloredMenu.svg" />
+
+    </div>
+    <!-- start dropdown for bill menu -->
+    <div class="dropdown-menu billdropdown" aria-labelledby="dropdownMenuBill">
+      <div class="d-flex justify-content-start align-items-center item-content" (click)="openDiscountModal(discountOnBill)">
+        <img src="assets/imgs/discount.svg"><span> خصم على الفاتورة</span>
+      </div>
+
+      <div class="d-flex justify-content-start align-items-center item-content" (click)="open(order_delivring)">
+        <img src="assets/imgs/deliver.svg"><span> توصيل</span>
+      </div>
+      <div class="d-flex justify-content-start align-items-center item-content">
+        <img src="assets/imgs/discount.svg"><span> حفظ الفاتورة</span>
+      </div>
+      <div class="d-flex justify-content-start align-items-center item-content">
+        <img src="assets/imgs/message.svg"> <span>اضافة تعليق</span>
+      </div>
+      <div class="d-flex justify-content-start align-items-center item-content">
+        <img src="assets/imgs/message.svg"><span> طباعة كعرض سعر</span>
+      </div>
+      <div class="d-flex justify-content-start align-items-center item-content">
+        <img src="assets/imgs/delete.svg"><span class="deletebill"> مسح الفاتورة</span>
+      </div>
+    </div>
+    <!-- end dropdown for bill menu -->
+
+    <!-- <div class="clientContainer" id="dropdownClient" onclick="toggleClientsList()" type="button">
+
+      <img src="imgs/addclient_icon.svg" />
+      <span class="clientTitle_container">
+        <span class="client_title"> اضف عميل </span>
+      </span>
+    </div> -->
+    <div class="clientContainer" id="dropdownClient" (click)="toggleClientsList()" type="button">
+      <div class="client-style">
+        <img src="assets/imgs/client.svg" />
+        <span class="clientTitle_container">
+          <span class="client_title"> اضف عميل </span>
+        </span>
+      </div>
+
+    </div>
+
+    <!-- start content  for adding client -->
+    <div class="dropdown-menu addClienMenu" id="clientList" style="display: none;">
+
+      <div class="headerAddClient">
+        <div class="col-sm-12 col-md-12 searchIconContainer">
+          <div class=" d-flex">
+            <form class=" inputContainer">
+              <div class="row d-flex align-items-center">
+                <div id="container">
+                  <div class="image-container" (click)="toggleClientsList()">
+                    <img src="assets/imgs/return-icon.svg" alt="A image" />
+                  </div>
+                </div>
+                <div id="iconSearch">
+                  <div class="search-image-container">
+                    <img src="assets/imgs/clientSearch.svg" />
+                  </div>
+                </div>
+                <div class="inputSearcontainer">
+                  <input class="form-control form-control-lg form-control-borderless clientSearchInput" type="search"
+                    placeholder="ابحث باسم العميل" />
+                </div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+      <!-- Nav tabs -->
+      <mat-tab-group [(selectedIndex)]="demo1TabIndex" #tabs>
+        <mat-tab label="أفراد">
+          <app-add-new-client></app-add-new-client>
+        </mat-tab>
+
+        <mat-tab label="محلات">
+    <app-add-shops></app-add-shops>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+    <!-- start content  for adding client -->
+  </div>
+
+</div>
+<ng-template #order_delivring let-modal>
+<!-- start modal of deliver el order -->
+<div class="modal-content">
+  <div class="modal-header">
+    <p class="modal-title" id="myModalLabel"><img src="assets/imgs/deliver.svg">&nbsp;التوصيل</p>
+  </div>
+  <div class="modal-body deliver-container">
+    <div class="input-group">
+      <input type="text" class="form-control client-info" placeholder="عاصم السيد - 01013875.81">
+      <span class="input-group-btn pic"> <img src="assets/imgs/clientPhoto.svg"> </span>
+
+    </div>
+
+    <p>
+      العنوان
+    </p>
+    <div class="input-group">
+      <input type="text" class="form-control address"
+        placeholder="شقة 4, دور 3, 7 ش حسن المأمون,مصر الجديدة, القاهرة">
+      <span class="input-group-btn update">
+        تعديل </span>
+    </div>
+    <input disabled type="text" class="form-control address-content"
+      placeholder="شقة 4, دور 3, 7 ش حسن المأمون,مصر الجديدة, القاهرة">
+    <p>
+      اختر طيار
+    </p>
+    <div class="select form-conterol">
+      <select name="slct" class="form-control" id="slct">
+        <option selected disabled> اختر طيار</option>
+        <option value="1"></option>
+
+      </select>
+    </div>
+    <p>
+      قيمة الديلفرى
+    </p>
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="0.00">
+      <span class="input-group-btn">
+        جـ.م
+      </span>
+    </div>
+
+    <p>
+      اضف تعليق
+    </p>
+    <input type="text" class="form-control" placeholder="اكتب تعليق">
+
+    <div class="btns-container">
+      <button type="button" class="btn-apply" data-dismiss="modal">تطبيق</button>
+      <button type="button" class="btn-cancel" data-dismiss="modal">الغاء</button>
+    </div>
+  </div>
+
+</div>
+<!--end Modal of modal of deliver el order  -->
+</ng-template>
+
+<ng-template #discountOnBill let-modal>
+  <!-- start modal of deliver el order -->
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title" id="myModalLabel">خصم على الفاتورة<img src="assets/imgs/discountWithoutBg.svg"></p>
+      </div>
+      <div class="modal-body discountTabsContainer">
+        <div class="tab-regular">
+          <div class="d-flex justify-content-center align-items-center">
+<!--
+            <div class="nav-item text-center">
+              <p class=" d-flex justify-content-center align-items-center nav-rigth"
+                id="nav-discount-tab" data-toggle="tab" href="#discount" role="tab" aria-controls="home"
+                aria-selected="true">الخصم<img src="assets/imgs/discountWithoutBg.svg"></p>
+            </div> -->
+
+
+          </div>
+          <!-- Tab panes -->
+          <div class="tab-pane fade show" id="discount" role="tabpanel" aria-labelledby="nav-discount-tab">
+            <div class="inputs-container d-flex justify-content-center align-items-center">
+              <input type="number" class="form-control" placeholder="0.00 ">
+
+              <img src="assets/imgs/convert.svg">
+              <input type="number" class="form-control" placeholder="00   %">
+
+
+            </div>
+
+            <div class="btns-container">
+              <button type="button" class="btn-cancel" data-dismiss="modal">الغاء</button>
+
+              <button type="button" class="btn-apply" data-dismiss="modal">تطبيق</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!--end Modal of modal of deliver el order  -->
+  </ng-template>
+

@@ -1,0 +1,231 @@
+.list-of-Users {
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #ffffff;
+  padding-left: 16px;
+  padding-right: 8px;
+  .list-group {
+    border-radius: 0rem;
+    padding-bottom: 51px;
+    .clientName {
+      font-size: 12px;
+    }
+    .client-price {
+      font-size: 12px;
+      font-weight: bold;
+      text-align: left;
+      color: #242424;
+      font-family: "NotoSansArabic-Bold";
+    }
+    p {
+      font-family: "NotoSansArabic-Medium";
+      font-size: 10px;
+      text-align: right;
+      color: #212121;
+      line-height: 1.6;
+    }
+  }
+  .list-group-item {
+    padding: 8px;
+    background-color: #fff;
+    border: none;
+    height: 52px;
+    margin: 0 0 20px;
+    border-bottom: 1px solid #f8f9fa;
+    img {
+      margin-left: 9px;
+    }
+  }
+}
+.addNewClient {
+  width: 100%;
+  height: 52px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #f0f2f5;
+  p {
+    font-family: "NotoSansArabic-Medium";
+    font-size: 12px;
+    font-weight: 500;
+    text-align: right;
+    color: #1877f2;
+  }
+}
+ul {
+  padding-inline-start: 0px;
+}
+//popup add new client
+// ::ng-deep .custom-addClient-modal .modal-dialog {
+//   width: 584px;
+//   max-width: 584px;
+// }
+::ng-deep .custom-addClient-modal .modal-content {
+  width: 584px;
+  max-width: 584px;
+    height: auto !important;
+  padding: 0;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+::ng-deep .custom-addClient-modal .modal-title {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  color: #212121;
+  font-family: "NotoSansArabic-Bold";
+}
+::ng-deep .custom-addClient-modal .modal-body {
+  padding: 17.2px 28px 24px 28px;
+  direction: rtl;
+  text-align: right;
+  .addnew_address {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: right;
+    color: #1877f2;
+    direction: ltr;
+  }
+  .btns-container {
+    padding-top: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .btn-apply {
+      padding: 10px 60px 9px;
+      border-radius: 26px;
+      font-family: "NotoSansArabic-Medium";
+      font-size: 14px;
+      font-weight: 500;
+      text-align: right;
+          width: 156px;
+    height: 48px;
+    border: solid 1px #1877f2;
+    background-color: #1877f2;
+    color: #fff;
+    }
+    .btn-cancel {
+      width: 111px;
+      height: 48px;
+      margin: 0px 12px 0 17px;
+      padding: 10px 43px 9px;
+      border-radius: 26px;
+      border: none;
+      background-color: transparent;
+      font-family: "NotoSansArabic-Medium";
+      font-size: 14px;
+      font-weight: 500;
+      text-align: right;
+      color: #65676b;
+    }
+  }
+  // .btns-container .btn-apply {
+  //   width: 156px;
+  //   height: 48px;
+  //   border: solid 1px #1877f2;
+  //   background-color: #1877f2;
+  //   color: #fff;
+  // }
+  span {
+    color: #878a90;
+    font-size: 10px;
+    font-family: "NotoSansArabic-Regular";
+  }
+  p {
+    font-family: "NotoSansArabic-SemiBold";
+    font-size: 10px;
+    font-weight: 600;
+    text-align: right;
+    color: #212121;
+    height: 25px;
+    margin-top: 10px;
+    margin-right: 5px;
+    line-height: 3;
+  }
+  .input-group-btn.pic {
+    top: 8px;
+    right: 21px;
+    z-index: 100;
+  }
+  .input-group-btn {
+    position: absolute;
+    left: 16px;
+    top: 15px;
+    width: 19px;
+    height: 25px;
+    font-family: "NotoSansArabic-Medium";
+    font-size: 12px;
+    text-align: right;
+    color: #212121;
+    z-index: 100;
+  }
+  .input-group-btn.update {
+    width: 24px;
+    height: 21px;
+    font-family: "NotoSansArabic-Medium";
+    font-size: 10px;
+    text-align: right;
+    color: #1877f2;
+    top: 18px;
+    text-decoration: underline;
+  }
+
+  // .form-control.address {
+  //   -webkit-backdrop-filter: blur(30px);
+  //   backdrop-filter: blur(30px);
+  //   border: solid 2px #4080ff;
+  //   background-color: #f5f5f5;
+  // }
+  .form-control {
+    height: 44px;
+    margin: 0px 0 0px 0px;
+    padding: 0px 12px 0px 16px;
+    border: solid 1px #4080ff;
+    background-color: #ffffff;
+    position: relative;
+    font-family: "NotoSansArabic-Regular";
+    letter-spacing: 0.11px;
+    text-align: right;
+    color: #65676b;
+    font-size: .8em;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 8px;
+    border: solid 1px #cbd0d6;
+  }
+  .spacebetween{
+    padding-left: 8px !important;
+  }
+  .form-control.address-content {
+    border: none;
+    background-color: #f5f5f5;
+    // margin-top: 8px;
+  }
+  .form-control.client-info {
+    height: 51.5px;
+    padding-right: 64px !important;
+    padding-left: 0 !important;
+    padding-top: 8px !important;
+    border-radius: 8px;
+    background-color: #e3f3ff !important;
+    border: none;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: right;
+    color: #212121;
+  }
+  .btns-container {
+    padding-top: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+  }
+}
+
+
+
+::ng-deep .modal.show .modal-dialog {
+  margin: 0 auto;
+}
+::ng-deep .modal {
+  top: 15%;
+}

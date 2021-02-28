@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#212121;stroke-miterlimit:10}
+        </style>
+    </defs>
+    <g id="Group_5319" transform="translate(-77.064 -18)">
+        <rect id="Rectangle_2251" width="24" height="24" fill="#fff" rx="12" transform="translate(77.064 18)"/>
+        <g id="Group_4651" transform="translate(76.148 18)">
+            <g id="Group_3933" transform="rotate(90 8 12.314)">
+                <g id="Group_5315" transform="translate(-.018 -.416)">
+                    <path id="Line_337" d="M0 0L0 12" class="cls-2" transform="translate(8.002 1.813)"/>
+                    <path id="Path_1911" d="M3.7 14.166l4.34 4.34 4.34-4.34" class="cls-2" transform="translate(0 -4.693)"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

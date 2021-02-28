@@ -1,0 +1,137 @@
+<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="nav-home-tab">
+  <div data-toggle="modal" style="cursor: pointer;" (click)="open(addNew_client)"
+    class="addNewClient d-flex justify-content-center align-items-center">
+    <p>
+      + اضافة عميل جديد
+    </p>
+  </div>
+  <div class="list-of-Users">
+    <ul class="list-group" >
+      <li *ngFor="let client of clients" class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="d-flex">
+          <img [src]="client.profileImage" style="float: left;">
+          <p>
+            <span class="clientName">
+              {{client.name}}<br>
+            </span>{{client.mobile}}
+          </p>
+        </div>
+        <span class="client-price">{{client.price}}</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- start modal for adding new client -->
+<ng-template #addNew_client let-modal>
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title" id="myModalLabel"><img src="assets/imgs/client_icon.svg">&nbsp; &nbsp;اضافة عميل</p>
+      </div>
+      <div class="modal-body deliver-container">
+
+        <div class="d-flex">
+          <div class="col-md-6 spacebetween" style="padding-left: 8px;">
+            <p>
+              اسم العميل </p>
+            <input type="text" id="client-name" class="form-control" placeholder="اكتب تعليق" tabindex="1">
+          </div>
+          <div class="col-md-6">
+            <p>
+              رقم الموبيل </p>
+            <input type="text" class="form-control" placeholder="اكتب تعليق">
+          </div>
+        </div>
+        <div class="d-flex align-items-center">
+          <div class="col-md-6 spacebetween" >
+            <p>
+              كود العميل </p>
+            <input type="text" class="form-control" placeholder="اكتب تعليق">
+          </div>
+          <div class="col-md-2 mt-4">
+            <input disabled type="text" class="form-control address-content text-center" placeholder="تغيير">
+          </div>
+        </div>
+        <div class="divider mt-3"></div>
+
+
+
+        <p>
+          <span>
+            (اختيارى)
+          </span>
+          العنوان1
+        </p>
+        <div class="d-flex">
+          <div class="col-md-4">
+            <p>
+              المحافظة
+            </p>
+            <div class="select" style="padding-left: 11px;">
+              <select name="slct" class="form-control" id="slct">
+                <option selected disabled> القاهرة</option>
+                <option value="1"></option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>
+              المدينة </p>
+            <div class="select" style="padding-left: 11px;">
+              <select name="slct" class="form-control" id="slct">
+                <option selected disabled>مدينة نصر </option>
+                <option value="1"></option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>
+              المنطقة </p>
+            <div class="select">
+              <select name="slct" class="form-control" id="slct">
+                <option selected disabled> الحى السابع</option>
+                <option value="1"></option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex">
+          <div class="col-md-6 spacebetween" >
+            <p>
+              الشارع
+            </p>
+            <input type="text" class="form-control" placeholder="صلاح سالم">
+          </div>
+          <div class="col-md-2 spacebetween" >
+            <p>
+              العمارة </p>
+            <input type="number" class="form-control" placeholder="1">
+          </div>
+          <div class="col-md-2 spacebetween">
+            <p>
+              الدور </p>
+            <input type="number" class="form-control" placeholder="2">
+          </div>
+          <div class="col-md-2" >
+            <p>
+              الشقة </p>
+            <input type="number" class="form-control" placeholder="1">
+          </div>
+        </div>
+
+
+        <div class="divider mt-3"></div>
+
+        <p class="addnew_address">
+          + اضافة عنوان
+        </p>
+        <div class="btns-container">
+          <button type="button" class="btn-apply" data-dismiss="modal">حفظ</button>
+          <button type="button" class="btn-cancel" data-dismiss="modal">الغاء</button>
+        </div>
+      </div>
+
+    </div>
+</ng-template>
+<!--end Modal of modal of add new client  -->
+
